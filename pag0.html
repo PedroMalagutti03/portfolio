@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Página Inicial</title>
+    <style>
+        /* Estilos para o corpo da página */
+        body {
+            background-image: url('Fundo login.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Estilos para o título (Bem-vindo!) */
+        h1 {
+            color: #fff;
+            /* Texto em branco */
+        }
+
+        /* Estilos para os parágrafos */
+        p {
+            color: #fff;
+            /* Texto em branco */
+        }
+
+        /* Estilos para rótulos (labels) */
+        label {
+            font-weight: bold;
+            /* Negrito nos rótulos */
+        }
+
+        /* Estilos para campos de entrada (input) */
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        /* Estilos para o botão de login */
+        button {
+            background-color: #007bff;
+            /* Cor de fundo azul */
+            color: #fff;
+            /* Texto em branco */
+            padding: 10px 20px;
+            border: none;
+            /* Sem borda */
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        /* Estilos para mensagens de erro */
+        #errorMessage {
+            color: red;
+            /* Texto em vermelho */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bem-vindo!</h1>
+    <p>Para acessar outras paginas, por favor, faça login:</p>
+    <P>Login: uva&nbsp;&nbsp;&nbsp;Senha: 2023</P>
+
+    <!-- Formulário de login -->
+    <form>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" required><br><br>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" required><br><br>
+
+        <button type="button" onclick="checkLogin()">Login</button>
+    </form>
+
+    <!-- Mensagem de erro exibida se as credenciais estiverem erradas -->
+    <p id="errorMessage"></p>
+
+    <script>
+        // Função para verificar o login
+        function checkLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "uva" && password === "2023") {
+                window.location.href = "pag1.html"; // Redireciona para a página 1 em caso de login bem-sucedido
+            } else {
+                document.getElementById("errorMessage").textContent = "Errou, tente novamente.";
+            }
+        }
+    </script>
+</body>
+
+</html>

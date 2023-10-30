@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Apresentacao - Pedro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode">
+    <h1>Projetos</h1>
+
+    <!-- Menu -->
+    <h2>Menu</h2>
+    <!--Tabela-->
+    <table border="1" style="background-color: #333;">
+        <tr>
+            <td><a href="pag1.html">Página inicial</a></td>
+            <td><a href="pag2.html">Currículo</a></td>
+            <td><a href="pag3.html">Projetos</a></td>
+            <td><a href="pag4.html">Novidades</a></td>
+            <td><a href="pag5.html">Contatos</a></td>
+        </tr>
+    </table>
+    <center>
+        <p><b><i>Malagutti Massas</i></b></p>
+    </center>
+    <p style="text-align: center; font-family: 'Times New Roman', Times, serif;">Para projetos na área de tecnologia,
+        no momento, não estou envolvido em nenhum. No entanto, minha família possui um negócio de vendas de massas
+        prontas
+        congeladas. As vendas são realizadas na Feira da Campos Sales todos os domingos, e durante a semana fazemos
+        entregas de massas. Fico responsável pelo estoque e utilizo o Excel para gerenciar o capital de giro, além das
+        vendas e entregas </p>
+
+    <style>
+        /* Estilos para o contêiner da imagem */
+        .slideshow-container {
+            max-width: 600px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* Estilos para as imagens */
+        .mySlides {
+            display: none;
+        }
+
+        /* Estilos para os botões de navegação */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: relative;
+            /* Altera de absolute para relative */
+            width: auto;
+            padding: 8px;
+            /* Reduz o tamanho dos botões */
+            color: rgb(255, 0, 0);
+            /* Altera a cor dos botões para azul */
+            background-color: transparent;
+            /* Remove o fundo dos botões */
+            border: none;
+            margin: 0 5px;
+            /* Adiciona margem entre os botões */
+            font-size: 20px;
+            /* Aumenta o tamanho do ícone dos botões */
+        }
+
+        .next {
+            float: right;
+            /* Alinha o botão "Próximo" à direita */
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <!--Imagem-->
+                <img src="cardapio1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <!--Imagem-->
+                <img src="feira apresent.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <!--Imagem-->
+                <img src="cardapio2.jpg" style="width:100%">
+            </div>
+
+
+            <button class="prev" onclick="plusSlides(-1)">&#10094; Anterior</button>
+            <button class="next" onclick="plusSlides(1)">Próximo &#10095;</button>
+        </div>
+        <center>
+            <p><b><i>Contatos:</i></b></p>
+            <p>Basta clicar no ícone da rede social que você será direcionado!</p>
+            <p>
+                <!-- Link para o whatsapp -->
+                <a href="https://api.whatsapp.com/send?phone=5521972379592">
+                    <!--Imagem-->
+                    <img src="whatsapp.png" style="width:5%" alt="Ícone do Whatsapp">
+                </a>
+                <!-- Link para o instagram -->
+                <a href="https://www.instagram.com/malaguttimassas/">
+                    <!--Imagem-->
+                    <img src="instagram.png" style="width:5%" alt="Ícone do Instagran">
+                </a>
+            </p>
+
+            <p>Onde ficamos?</p>
+            <!--Imagem-->
+            <img src="Feira.png" style="width:40%">
+            <p><a href="https://www.google.com/maps/search/feira+da+campos+sales+rj/@-22.915495,-43.2183739,19z?entry=ttu"
+                    style="color: rgb(255, 0, 0);">
+                    Click aqui para ver o mapa!</a></p>
+        </center>
+
+        <script>
+            // Inicializa o índice do slide
+            let slideIndex = 1;
+
+            // Exibe o primeiro slide
+            showSlides(slideIndex);
+
+            // Função para avançar ou retroceder os slides
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Função para mostrar um slide específico
+            function showSlides(n) {
+                const slides = document.querySelectorAll('.mySlides');
+
+                // Verifica se ultrapassou o último slide
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+
+                // Verifica se retrocedeu além do primeiro slide
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+
+                // Oculta todos os slides
+                slides.forEach(slide => slide.style.display = 'none');
+
+                // Exibe o slide atual
+                slides[slideIndex - 1].style.display = 'block';
+            }
+        </script>
+    </body>
+    <!-- O arquivo JavaScript externo -->
+    <script src="script.js"></script>
+    <!-- Botão para alternar o tema -->
+    <button class="theme-button" onclick="toggleTheme()"></button>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/* styles.css */
+
+/* Estilo para o corpo da página no modo claro */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8AFF8A;
+    /* Cor de fundo verde claro no modo claro */
+}
+
+/* Estilo para o tema escuro */
+body.dark-mode {
+    background-color: #333;
+    /* Cor de fundo escura */
+    color: #fff;
+    /* Cor do texto no modo escuro */
+}
+
+/* Estilo para o cabeçalho com o nome */
+h1 {
+    background-color: #333;
+    /* Cor de fundo do cabeçalho */
+    color: #fff;
+    /* Cor do texto do cabeçalho */
+    padding: 20px;
+    margin: 0;
+}
+
+/* Estilo para o menu */
+h2 {
+    background-color: #333;
+    /* Cor de fundo do menu */
+    color: #fff;
+    /* Cor do texto do menu */
+    padding: 10px;
+    margin: 0;
+}
+
+table {
+    width: 50%;
+    /* Tabela ocupa toda a largura da página */
+    border: none;
+    /*border-collapse: collapse;  Para remover espaçamento entre células */
+}
+
+th,
+td {
+    border: 5px solid blue;
+    border-radius: 10px;
+    text-align: left;
+    /* Alinhar conteúdo à esquerda nas células */
+    padding: 8px;
+    /* Espaçamento interno nas células */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Cor de fundo para linhas pares */
+}
+
+a {
+    text-decoration: none;
+    /* Remover sublinhado dos links */
+    color: #007bff;
+    /* Cor dos links do menu */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Sublinhar links ao passar o mouse sobre eles */
+}
+
+/* Estilo para o botão de alternar tema */
+.theme-button {
+    position: absolute;
+    top: 10px;
+    /* Distância do topo */
+    right: 10px;
+    /* Distância da direita */
+    padding: 5px;
+    width: 30px;
+    /* Largura do botão */
+    height: 30px;
+    /* Altura do botão */
+    border: none;
+    cursor: pointer;
+    background-image: url('lua.png');
+    /* Adicionar uma imagem de lua */
+    background-repeat: no-repeat;
+    /* Evitar repetição da imagem */
+    background-position: center;
+    /* Centralizar a imagem */
+    background-size: 20px;
+    /* Tamanho da imagem */
+    border-radius: 50%;
+    /* Tornar o botão circular */
+}
+
+/* Estilo para o botão de alternar tema no modo escuro */
+body.dark-mode .theme-button {
+    background-color: #ff0;
+    /* Cor de fundo amarela no modo escuro */
+}
